@@ -1,0 +1,364 @@
+/* -------------------------------------------------------------------------- */
+/*                               Helper Classes                               */
+/* -------------------------------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: "Red Hat Text", sans-serif;
+    font-weight: 700;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+p {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Layout                                   */
+/* -------------------------------------------------------------------------- */
+
+.main {
+
+    background: hsl(235, 16%, 14%);
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    z-index: 2;
+    top: 20%;
+    gap: 80px
+}
+
+.decor {
+    position: relative;
+    width: 100dvw;
+
+
+}
+
+.decor svg {
+    max-width: 100dvw;
+
+}
+
+.svg-top {
+    height: 80dvh;
+}
+
+.svg-bottom {
+
+    height: 20dvh;
+}
+
+
+.social {
+    position: absolute;
+    top: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   CONTENT                                  */
+/* -------------------------------------------------------------------------- */
+
+.title {
+    color: white;
+
+}
+
+.remaining-time {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 40px
+}
+
+.grid-item {
+    text-align: center;
+    font-size: 30px;
+
+
+}
+
+.grid-item p {
+    color: hsla(0, 0%, 100%, .5);
+    font-size: 12px;
+    letter-spacing: 8px;
+}
+
+.item-box span p {
+    color: hsl(345, 95%, 68%);
+    font-size: 80px;
+}
+
+
+
+.item-box {
+
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: hsla(237, 17%, 16%, .6);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+
+    border-bottom: 10px solid hsla(237, 17%, 1%, .6);
+}
+
+.item-box span {
+    width: 120px;
+}
+
+.bla-bla {
+    animation: flipdown .3s .3s linear both;
+}
+
+.item-box::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border: 4px inset hsla(237, 17%, 16%, .1);
+    border-left: 4px solid hsla(237, 17%, 1%, .6);
+    border-right: 4px solid hsla(237, 17%, 1%, .6);
+    background-color: transparent;
+    transform: translateY(-50%);
+    z-index: 1;
+
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   SOCIAL                                   */
+/* -------------------------------------------------------------------------- */
+a{
+    color: #8385A9;
+}
+
+.svg-fc {
+    color: #8385A9;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.svg-fc:hover {
+    color: hsl(345, 95%, 68%);
+}
+
+svg {
+    color: #8385A9;
+    fill: #8385A9;
+    cursor: pointer;
+}
+
+svg:hover {
+    fill: hsl(345, 95%, 68%);
+}
+
+svg:hover {
+    color: hsl(345, 95%, 68%);
+}
+
+
+/* -------------------------------------------------------------------------- */
+
+
+@media only screen and (max-width: 370px) {
+
+    .main {
+        justify-content: flex-end;
+    }
+
+    .content {
+        top: 15%;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .title h1 {
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    .remaining-time {
+
+        gap: 21px;
+
+    }
+
+
+    .grid-item p {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .item-box span p {
+
+        font-size: 32px;
+    }
+
+    .item-box {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 3px solid hsla(237, 17%, 1%, .6);
+    }
+
+    .decor {
+        position: relative;
+        overflow: hidden;
+        max-width: 100dvw;
+
+
+    }
+
+    .decor svg {
+        max-width: none;
+    }
+
+    .svg-top {
+        height: 100dvh;
+    }
+
+    .svg-bottom {
+        height: 20dvh;
+    }
+
+    .decor #svg2 {
+        position: absolute;
+        bottom: 0;
+        right: -430px;
+    }
+
+    .social {
+        top: 90%;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 370px) and (max-width: 780px) {
+
+    .main {
+        justify-content: flex-end;
+    }
+
+    .content {
+        top: 20%;
+        text-align: center;
+        gap: 70px;
+    }
+
+    .title {
+        font-size: 25px;
+        letter-spacing: 5px;
+
+
+    }
+
+    .remaining-time {
+
+        gap: 18px;
+
+    }
+
+
+    .grid-item p {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .item-box span p {
+
+        font-size: 40px;
+    }
+
+    .item-box {
+
+        width: 80px;
+        height: 80px;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-bottom: 4px solid hsla(237, 17%, 1%, .6);
+    }
+
+    .decor {
+        position: relative;
+        overflow: hidden;
+        max-width: 100dvw;
+
+
+    }
+
+    .decor svg {
+        max-width: none;
+    }
+
+    .svg-top {
+        height: 100dvh;
+    }
+
+    .svg-bottom {
+        height: 20dvh;
+    }
+
+    .decor #svg2 {
+        position: absolute;
+        bottom: 0;
+        right: -440px;
+    }
+
+    .social {
+        top: 93%;
+    }
+
+
+
+}
+
+@keyframes flipup {
+    0% {
+        -webkit-transform: rotateX(0deg);
+    }
+
+    90% {
+        -webkit-transform: rotateX(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-90deg);
+    }
+}
+
+@keyframes flipdown {
+    0% {
+        -webkit-transform: rotateX(90deg);
+    }
+
+    80% {
+        -webkit-transform: rotateX(5deg);
+    }
+
+    90% {
+        -webkit-transform: rotateX(15deg);
+    }
+
+    100% {
+        -webkit-transform: rotateX(0deg);
+    }
+}
