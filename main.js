@@ -28,8 +28,8 @@ function timeLapse() {
 
 let day, hour, minute, second;
 
-//Seteaza data evenimentului: YYYY/MM/DD
-const fixedDate = "2024-04-08T00:00:00";
+//Seteaza data 
+const fixedDate = "2025-04-08T00:00:00";
 
 let remainingTime = remainingTimeCalc(fixedDate);
 
